@@ -1,7 +1,5 @@
 <link rel="import" href="../polymer/polymer.html">
 
-<script src="//v2.libanswers.com/load_chat.php?hash=f7df6dc008c477e7ecf6dafa1a5b16af"></script>
-
 <!--
 `uvalib-chat`
 @demo demo/index.html
@@ -15,7 +13,8 @@
       }
     </style>
 
-    <div id="libchat_f7df6dc008c477e7ecf6dafa1a5b16af"></div>
+    <script src="//v2.libanswers.com/load_chat.php?hash=[[widgetHashValue]]"></script>
+    <div id="libchat_[[widgetHashValue]]"></div>
 
   </template>
 
@@ -25,6 +24,13 @@
       is: 'uvalib-chat',
 
       properties: {
+        /**
+         * Hash value from Springshare widget code; default value is for standard LibChat embed widget.
+         */
+        widgetHashValue: {
+          type: String,
+          value: "1a784443d6215a140f28fc6903b4a675"
+        }
       },
 
     });
